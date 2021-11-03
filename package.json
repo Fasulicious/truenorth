@@ -1,0 +1,50 @@
+{
+  "name": "truenorth",
+  "version": "1.0.0",
+  "description": "truenorth challenge",
+  "main": "server.js",
+  "scripts": {
+    "start": "node -r esm server.js",
+    "dev": "nodemon",
+    "lint": "standard",
+    "format": "standard --fix",
+    "test": "ava",
+    "coverage": "nyc ava"
+  },
+  "keywords": [],
+  "author": "Fidel Antonio Soto Ugaldi <fantoniosoto@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "esm": "^3.2.25",
+    "joi": "^17.4.2",
+    "koa": "^2.13.4",
+    "koa-body": "^4.2.0",
+    "koa-compress": "^5.1.0",
+    "koa-helmet": "^6.1.0",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^10.1.1",
+    "koa2-cors": "^2.0.6",
+    "log4js": "^6.3.0",
+    "mongoose": "^6.0.12",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "ava": "^3.15.0",
+    "nodemon": "^2.0.14",
+    "standard": "^16.0.4",
+    "supertest": "^6.1.6"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ],
+    "environmentVariables": {
+      "DB_DOMAIN": "tests",
+      "DB_SUBDOMAIN": "cnjna",
+      "DB_USER": "fasushka",
+      "DB_PASSWORD": "fasushka",
+      "NUMBER_OF_TITLES": "10"
+    }
+  }
+}

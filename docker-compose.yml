@@ -1,0 +1,12 @@
+version: '3'
+services:
+  backend:
+    build: './'
+    environment:
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_DOMAIN: ${DB_DOMAIN}
+      DB_SUBDOMAIN: ${DB_SUBDOMAIN}
+      NUMBER_OF_TITLES: ${NUMBER_OF_TITLES}
+    ports:
+      - 8000:3000
