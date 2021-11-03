@@ -3,6 +3,7 @@ import {
 } from '../db/queries/task'
 import Task from '../db/models/task'
 import logger from '../utils/logger'
+import CustomError from '../utils/custom.error'
 
 const log = logger.getLogger()
 

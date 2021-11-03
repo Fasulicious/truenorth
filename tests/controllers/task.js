@@ -1,5 +1,4 @@
 import test from 'ava'
-import { v4 as uuidv4 } from 'uuid'
 import startDB from '../../db'
 import {
   countTasks,
